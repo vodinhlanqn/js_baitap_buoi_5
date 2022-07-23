@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JS - Bài Tập Buổi 5</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS v5.2.0-beta1 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center mt-4 bg-info rounded py-3">
+				JAVASCRIPT - BÀI TẬP - BUỔI 5
+			</h1>
+
+			<!-- Bài tập số 1: QUẢN LÝ SINH VIÊN -->
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-3">
+							Bài tập 1: QUẢN LÝ SINH VIÊN
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="diemChuan"
+											class="form-control"
+											placeholder="Nhập điểm chuẩn "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<select class="form-select" id="area">
+											<option selected>Chọn khu vực</option>
+											<option value="A">Khu vực A</option>
+											<option value="B">Khu vực B</option>
+											<option value="C">Khu vực C</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<select class="form-select" id="object">
+											<option selected>Chọn đối tượng</option>
+											<option value="1">Đối tượng 1</option>
+											<option value="2">Đối tượng 2</option>
+											<option value="3">Đối tượng 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="diemThuNhat"
+											class="form-control"
+											placeholder="Nhập điểm thứ nhất "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="diemThuHai"
+											class="form-control"
+											placeholder="Nhập điểm thứ hai"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="diemThuBa"
+											class="form-control"
+											placeholder="Nhập điểm thứ ba"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<button
+										id="btnTinhDiemChuan"
+										type="button"
+										class="btn btn-danger w-75"
+									>
+										Tính điểm chuẩn
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showDiemChuan" class="fs-6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Bài tập số 2: TÍNH TIỀN ĐIỆN -->
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-3">
+							Bài tập 2: TÍNH TIỀN ĐIỆN
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="text"
+											name=""
+											id="hoTen"
+											class="form-control"
+											placeholder="Nhập họ tên "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="soKW"
+											class="form-control"
+											placeholder="Nhập số Kw"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<button
+										id="btnTinhTienDien"
+										type="button"
+										class="btn btn-success w-75"
+									>
+										Tính tiền điện
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showTienDien" class="fs-6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h1 class="text-center mt-5 bg-warning rounded py-3">
+				JAVASCRIPT - BÀI TẬP THÊM - BUỔI 5
+			</h1>
+			<!-- Bài tập số 3: TÍNH THUẾ THU NHẬP CÁ NHÂN -->
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-3">
+							Bài tập 3: TÍNH THUẾ THU NHẬP CÁ NHÂN
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<label for="nameInput">Nhập họ tên</label>
+									<div class="form-group mb-3">
+										<input
+											type="text"
+											name=""
+											id="nameInput"
+											class="form-control"
+											placeholder="Nhập họ tên "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<label for="tongThuNhap">Tổng thu nhập năm</label>
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="tongThuNhap"
+											class="form-control"
+											placeholder="Nhập tổng thu nhập năm "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<label for="soNguoiPhuThuoc">Số người phụ thuộc</label>
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="soNguoiPhuThuoc"
+											class="form-control"
+											placeholder="Nhập số người phụ thuộc"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<button
+										id="btnTinhThue"
+										type="button"
+										class="btn btn-success w-75"
+									>
+										Tính thuế
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showThueThuNhap" class="fs-5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bài tập số 4: TÍNH TIỀN CÁP -->
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-3">
+							Bài tập 4: TÍNH TIỀN CÁP
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<select class="form-select" id="loaiKH">
+											<option selected>Chọn loại khách hàng</option>
+											<option value="personal">Nhà Dân</option>
+											<option value="company">Doanh Nghiệp</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="text"
+											name=""
+											id="maKH"
+											class="form-control"
+											placeholder="Nhập mã khách hàng"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="soKenh"
+											class="form-control"
+											placeholder="Nhập số kênh cao cấp"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="soKetNoi"
+											class="form-control isConnect"
+											placeholder="Nhập số kết nối"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-4">
+									<button
+										id="btnTinhTienCap"
+										type="button"
+										class="btn btn-primary w-75"
+									>
+										Tính tiền cáp
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showTienCap" class="fs-5"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+			integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./main.js"></script>
+	</body>
+</html>
